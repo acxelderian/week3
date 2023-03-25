@@ -27,20 +27,20 @@ class KDramaScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget> [
                   Expanded(
-                    flex:0,
+                    flex:1,
                     child: Text(
                         kdrama.name,
-                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.cyan, fontSize: 40),
+                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.cyan, fontSize: 30),
                     ),
                   ),
                   Expanded(
-                      flex:2,
+                      flex:1,
                       child: HeroMode(
                         child: Hero(
                             tag: 'kdrama',
-                            child: Image.network(kdrama.banner),
+                            child: Image.asset(kdrama.banner),
                         ),
-                        enabled: false,
+                        enabled: true,
                       ),
                   ),
                 ]

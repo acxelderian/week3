@@ -21,15 +21,16 @@ class DetailKDramaScreen extends StatelessWidget {
         child: Column(
           children: [
             HeroMode(
-                enabled: false,
+                enabled: true,
                 child: Hero(
                     tag: 'kdrama',
                     // child: Image.network(kdrama.banner)
-                    child: FadeInImage.assetNetwork(
-                        fadeInCurve: Curves.bounceIn,
-                        placeholder: 'image/alchemy.png',
-                        image: kdrama.banner,
-                    ),
+                    child: Image.asset(
+                        kdrama.banner,
+                      height: 300,
+                      width: 400,
+                      fit: BoxFit.cover,
+                    )
                 ),
             ),
             // Padding(
